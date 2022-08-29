@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <style type="text/css">
+        div {
+            height: 200px;
+            width: 200px;
+            border: black 1px solid;
+            background: plum;
+        }
+        </style>
+    <title>Mi demo</title>
+</head>
+<body>
+    <div id="uno" class="claseDemo">Hola1</div>
+    <div id="dos" class="claseDemo">Hola2</div>
+    <div id="tres" class="claseDemo">Hola3</div>
+
+    <script>
+        // let divUno = document.querySelector("#uno");
+        const divs = document.querySelectorAll("div");
+        divs.forEach(elemento => {
+            elemento.addEventListener("click",function(evento){
+                const miElemento = evento.target
+                if(miElemento.style.background==="plum"){
+                    miElemento.style.background="red"
+                }else{
+                 miElemento.style.background="plum"
+            }
+            })
+        })
+        
+        // divUno.addEventListener("click",function(evento){
+        //     const miElemento = evento.target;
+
+            // if(miElemento.style.background==="plum"){
+            //     miElemento.style.background="red"
+            // }else{
+            //     miElemento.style.background="plum"
+            // }
+            
+        // })
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+    div{
+        estilos
+    }
+
+    .claseDemo{
+        estilos  
+    }
+
+    #uno{
+        estilos
+    }
+ -->
