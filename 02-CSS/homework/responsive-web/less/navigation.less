@@ -1,1 +1,35 @@
 // Código de Nav acá
+*{
+    box-sizing: border-box;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: 30px;
+    
+}
+
+.contenedorTítulo{
+    .mixinContenedor1();
+    
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Russo One', sans-serif;
+    color: black;
+
+}
+.contenedorBarra{
+
+    .mixinContenedor2();
+    
+    justify-content: center;
+    align-items:center;
+    justify-content: space-around;
+    @media (max-width: 500px){
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+}
+

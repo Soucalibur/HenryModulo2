@@ -13,7 +13,11 @@
     }
 
   }
-
+  @media (max-width: 500px){
+    
+    padding: 10px;
+    margin:15px ;
+  }
   .music-images {
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +28,25 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      flex-direction: column-reverse;
+      @media (max-width: 500px){
+        width: 90%;
+        padding: 10px;
+        
     }
+      
+    }
+    .tecnologia, .ondas{
+      @media (max-width: 500px){
+        display: none;
+    }
+    .auricular{
+      @media (max-width: 500px){
+        width: 98%;
+    }
+    }
+    }
+    
   }
 
   .musica-nueva {
@@ -45,7 +67,13 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+    @media (max-width: 500px){
+      flex-direction: column-reverse;
+      padding: 10px;
+      margin:15px ;
+      
+    }
+    
     .actual-text {
       width: 50%;
 
@@ -58,6 +86,25 @@
       }
 
       .btn {
+        .mixinRegistrarse();
+        @media (max-width: 500px){
+          color: white;
+          background-color: black;
+          width: 95%;
+          height: 20%;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          font-size: 2em;
+          border-radius:10px;
+
+          
+        }
+      }
+      @media (max-width: 500px){
+        width: 98%;
+        margin: 1px;
       }
     }
 
@@ -69,7 +116,35 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+        
       }
+      @media (max-width: 500px){
+        width: 90%;
+        padding: 10px;
+        
+    }
+    
     }
   }
+}
+.contenedorImagen{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+      border-radius: 30px;
+      
+      
+  }
+  @media (max-width: 500px){
+    grid-column-start: 2;
+    grid-column-end: 12;
+    background-color: red;
+    object-fit:scale-down;
+}
+
 }
