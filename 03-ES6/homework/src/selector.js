@@ -35,6 +35,7 @@ var selectorTypeMatcher = function(selector) {
     if(selector[i] === "." && selector[0] !== "." ){
       return "tag.class"
     }
+    //if(selector.includes(".""))return tag.class  una mejor forma de buscar dentro del string pasado
     
   }
   return "tag";
@@ -58,17 +59,26 @@ var matchFunctionMaker = function(selector) {
     
   } else if (selectorType === "class") {
     matchFunction = (elemento) => elemento.classList.contains(selector.substring(1));
+    //matchFcuntion = (elemento) => {                                       // Forma mas compleja de hacerlo con mismos pasos por detras
+    // for (const clase in elemento.classList){
+    //   if ("."+clase === selector)return true;
+    // } 
+    // return false;
+    //}
 
   } else if (selectorType === "tag.class") {
     matchFunction = function(elemento){
       let [tag,clase] = selector.split(".");
       return elemento.tagName.toLowerCase() === tag.toLowerCase() && elemento.classList.contains(clase);
      }
+    //  const [miTag,miClass] = selector.split(".");                      Forma de hacerlo con recursividad
+    //  return (
+    //   matchFunctionMaker(miTag)(elemento) && matchFunctionMaker("." + miClass)(elemento);
+    //  )
 
   } else if (selectorType === "tag") {
-    matchFunction = (elemento) => elemento.tagName && (elemento.tagName.toLowerCase() === selector.toLowerCase());
-       
-     
+    matchFunction = (elemento) =>  (elemento.tagName.toLowerCase() === selector.toLowerCase());
+    
   }
   return matchFunction;
 };
