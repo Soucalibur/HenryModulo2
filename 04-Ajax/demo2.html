@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .usuario{
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 3px;
+    }
+</style>
+<body>
+    <div><button class="getUsers">GET ALL USERS</button></div>
+
+    <hr />
+
+    <div>
+        <input type="text" name="userId" id="userId" />
+        <button class="getUser">GET USER</button>
+    </div>
+    
+    <script>
+        $(".getUsers").click(()=>{
+            $.get("https://jsonplaceholder.typicode.com/users",(response)=>{
+                for (const user of response) {
+                    $(`<div class="usuario">
+                        <p>Nombre:${user.name}</p>
+                        <p>Username: ${user.username}</p>
+                        <p>Email: ${user.email}</p>
+                    </div>`).appendTo("body")
+                }
+                
+            })
+        })
+
+        $(".getUser").click(()=>{
+            const id = $("#userId")[0].value;
+            
+            $.get(`https://jsonplaceholder.typicode.com/users/${id}`,(response)=>{
+                $(`<div class="usuario">
+
+                        <p>ID:${response.id}</p>
+                        <p>Nombre:${response.name}</p>
+                        <p>Username: ${response.username}</p>
+                        <p>Email: ${response.email}</p>
+                </div>`).appendTo("body")
+            })
+        })
+    </script>
+</body>
+</html>

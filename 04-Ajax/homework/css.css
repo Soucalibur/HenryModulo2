@@ -1,0 +1,19 @@
+
+.contenedor{
+    
+    background-image: url(./img/amigos.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    
+    
+}
+
+
+
+#Ver, #Buscar, #Borrar {
+    
+    text-align: center;
+    border: solid 2px;
+    background-color: rgba(206, 205, 205, 0.531);
+}
+
