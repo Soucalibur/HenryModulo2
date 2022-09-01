@@ -10,7 +10,7 @@ $("#boton").click(()=>{
             
             for(let y in respuesta[i]){
                $(`<div>
-                <p>${y} :${respuesta[i][y]} </p>
+                <p class="modelo">${y} :${respuesta[i][y]} </p>
                  
                 </div>`).appendTo("#Ver")
             }
@@ -33,7 +33,7 @@ $("#search").click(()=>{
         for(let y in respuesta){
              $(`<div>
             
-             <p>${y} :${respuesta[y]} </p>
+             <p class="modelo">${y} :${respuesta[y]} </p>
                  
              </div>`).appendTo("#Buscar")
          }
