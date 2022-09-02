@@ -3,16 +3,16 @@
 // Método "Ver Amigos" //////////////////////////////////////
 
 $("#boton").click(()=>{
-    console.log("hola")
+    $("#lista").empty();
     $.get("http://localhost:5000/amigos",(respuesta)=>{
-        console.log(respuesta)
+        
         for(let i in respuesta){
             
             for(let y in respuesta[i]){
                $(`<div>
-                <p class="modelo">${y} :${respuesta[i][y]} </p>
+                <li class="modelo">${y} :${respuesta[i][y]} </li>
                  
-                </div>`).appendTo("#Ver")
+                </div>`).appendTo("#lista")
             }
            
             
@@ -26,6 +26,7 @@ $("#boton").click(()=>{
 //Método "Buscar Amigos" ////////////////////////////////////
 $("#search").click(()=>{
     const busqueda = $("#input")[0].value;
+    $("#amigo").empty();
 
      $.get(`http://localhost:5000/amigos/${busqueda}`,(respuesta)=>{
         console.log(respuesta)
@@ -35,7 +36,7 @@ $("#search").click(()=>{
             
              <p class="modelo">${y} :${respuesta[y]} </p>
                  
-             </div>`).appendTo("#Buscar")
+             </div>`).appendTo("#amigo")
          }
         
 
