@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#header{
+  color: rgb(15, 17, 16);
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+  text-align: center;
+  padding: 50px;
+  padding-bottom: 70px;
+  display: block;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bodies{
+  background-image: url(./components/img/atardecer.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+
 }
