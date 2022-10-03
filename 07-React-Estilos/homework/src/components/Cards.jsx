@@ -3,10 +3,10 @@ import Card from "./Card.jsx";
 import style from "./Cards.module.css"
 
 export default function Cards(props) {
-  // acá va tu código
-  // tip, podés usar un map
+ 
   return (
   
+
   <div class = {`${style.flex}`}>
 
      {props.cities.map((e) =>  
