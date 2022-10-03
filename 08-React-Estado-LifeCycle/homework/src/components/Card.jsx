@@ -1,28 +1,36 @@
 import React from 'react';
-import './Card.css';
+import style from "./Card.module.css"
 
-export default function Card ({min, max, name, img, onClose, id}) {
-    return (
-      <div className="card">
-        <div id="closeIcon" className="row">
-            <button onClick={onClose} className="btn btn-sm btn-danger">X</button>
-        </div>
-        <div className="card-body">
-          <h5 className="card-title">{name}</h5>
-          <div className="row">
-            <div className="col-sm-4 col-md-4 col-lg-4">
-              <p>Min</p>
-              <p>{min}°</p>
-            </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
-              <p>Max</p>
-              <p>{max}°</p>
-            </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
-              <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} width="80" height="80" alt="" />
-            </div>
-          </div>
-        </div>
+
+export default function Card(props) {
+  
+  // acá va tu código
+  return (
+  
+  <div id = {`${style.contenedor}`}>
+
+    <div className = {`${style.prueba}`}>
+      <button id = {`${style.boton}`}  onClick = {props.onClose} >X</button>
+
+      <p id = {`${style.titulo}`}>{props.name}</p>
+
+      
+      <div id ={`${style.palabras}`}>
+      
+        <p id = {`${style.min}`}>Min <br />{props.min}</p>
+
+        <p id={`${style.max}`}>Max <br />{props.max}</p>
+
       </div>
-    );
+      
+
+      <img id={`${style.imagen}`} src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt="imagen1" />
+      
+
+    </div>
+     
+
+  </div>
+  )
 };
+

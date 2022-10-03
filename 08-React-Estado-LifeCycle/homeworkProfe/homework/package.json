@@ -1,5 +1,5 @@
 {
-  "name": "08-react-estados-lifecycles",
+  "name": "06-react-intro",
   "version": "1.0.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
@@ -8,7 +8,8 @@
     "axios": "^0.27.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
+    "react-scripts": "^4.0.3",
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",

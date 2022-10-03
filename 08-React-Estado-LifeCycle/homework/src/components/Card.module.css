@@ -1,0 +1,94 @@
+
+#contenedor{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+}
+
+.prueba{
+
+    display: grid;
+    
+    border-radius: 10px;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: 30px;
+    
+    background-image: url(img/nubes.jpg);
+    background-size: cover;
+    border: solid 1px;
+    
+    width: 350px;
+    height: 25vh;
+    
+}
+
+#boton{
+    background-color: rgba(124, 173, 230, 0);
+    color: white;
+    font-size: 14px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1px 1px;
+    border: 2px solid lightblue ;
+    border-radius: 50%;
+    grid-column-start: 12;
+    grid-row-start: 1;
+
+}
+
+#palabras{
+    font-family: 'Courier New', Courier, monospace;
+    grid-column-start:2 ;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 9;
+
+    display: inline-flex;
+    justify-content:space-around;
+    align-items: center;
+
+    
+    text-shadow: 1px 1px 1px rgb(4, 83, 66);
+}
+
+#imagen{
+    grid-column-start: 8 ;
+    grid-column-end:13;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    align-self: center;
+    margin-left: 30px;
+    margin-top: 10px;
+    
+    background: linear-gradient(30deg, #0b90c5 30%, #e1eff0 80%);
+    width: 55%;
+    border-radius: 20px;
+    
+}
+
+#titulo{
+    font-size: 2em;
+    grid-column-start: 1;
+    grid-column-end:9;
+    grid-row-start: 1;
+    padding: 10px;
+    text-shadow: 1px 1px 1px rgb(108, 202, 233);
+    
+}
+
+ /* /////// ID DE MINIMO Y MAXIMO //////////////// */
+
+#min{
+    color: rgb(107, 170, 252);
+
+}
+
+#max{
+
+    
+    color: rgb(73, 248, 248);
+}
+
+
+/* /////////////////////////////////////////////// */
