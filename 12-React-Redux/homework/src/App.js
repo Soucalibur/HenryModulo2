@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar/NavBar";
 import { Route } from "react-router-dom";
 import Movie from "./components/Movie/Movie";
 
+
+
 function App() {
   return (
       <React.Fragment>
