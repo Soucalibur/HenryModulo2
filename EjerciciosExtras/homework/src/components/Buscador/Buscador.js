@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import {getAllPosts} from "../../actions/index"
 
 import './Buscador.css';
 
@@ -22,7 +23,7 @@ export class Buscador extends Component {
   }
 
   render() {
-    const {  postsSearch } = this.state;
+    // const {  postsSearch } = this.state;
     return (
       <div className= "details">
         <h2>Buscador</h2>
@@ -33,7 +34,7 @@ export class Buscador extends Component {
               type="text"
               id="title"
               autoComplete="off"
-              value={ postsSearch}
+              // value={ postsSearch}
             />
           </div>
           <button type="submit">BUSCAR</button>
@@ -50,4 +51,17 @@ export class Buscador extends Component {
     );
   }
 }
-export default Buscador;
+
+
+export const mapStateToProps = (state)=>{
+  return{
+    posts: state.posts
+  }
+}
+export const mapDispatchToProps = (dispatch)=>{
+  return{
+    getAllPosts: ()=>dispatch(getAllPosts())
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Buscador);

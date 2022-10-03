@@ -40,19 +40,17 @@ export class CommentsPost extends React.Component {
     }
 }
 
-/*export function mapStateToProps(state) {
-  return {
-    commentsPost: state.commentsPost,
-  };
+export const mapStateToProps= (state)=>{
+  return{
+    commentsPost: state.commentsPost 
+  }
 }
 
-export function mapDispatchToProps(dispatch) {
-    return {
-        getAllCommentsPost: (id) => dispatch(getAllCommentsPost(id))
-    };
+export const mapDispatchToProps= (dispatch)=>{
+  return{
+    getAllCommentsPost: (id)=>{dispatch(getAllCommentsPost(id))}
   }
-  
-  export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(CommentsPost );*/
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(CommentsPost)
+
